@@ -9,10 +9,12 @@ import SuccessStories from './Sections/SucessStories'
 import StudyAbroadWithUs from './Sections/StudyAbroadWithUs'
 import ReactGA from 'react-ga'
 
-const trackingId = "G-PJ2LZWYRTB"
-ReactGA.initialize(trackingId)
+
 
 const App = () => {
+
+  const trackingId = "G-PJ2LZWYRTB"
+  ReactGA.initialize(trackingId)
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
