@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Sections/Hero'
 import Services from './Sections/Services'
@@ -11,18 +11,21 @@ import ReactGA from 'react-ga'
 
 
 
+
 const App = () => {
 
   const trackingId = "G-PJ2LZWYRTB"
   ReactGA.initialize(trackingId)
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, [])
+  ReactGA.set({ anonymizeIp: true ,
+    hitType: 'pageview',
+    page: window.location.pathname,
+  })
+
 
   return (
     <main className="relative">
       <Navbar />
-      <section>
+      <section >
         <Hero />
       </section>
 
@@ -44,7 +47,7 @@ const App = () => {
       <section className='padding'>
         <StudyAbroadWithUs />
       </section>
-      <section>
+      <section >
         <Footer />
       </section>
     </main>
