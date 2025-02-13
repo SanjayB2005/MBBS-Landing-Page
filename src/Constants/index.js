@@ -128,44 +128,44 @@ export const content = {
 
 
 export const universities = {
-    Russia: [
-      "Kazan Federal University",
-      "First Moscow State Medical University",
-      "Crimea Federal University",
-      "Volgograd State Medical University"
-    ],
-    Uzbekistan: [
-      "Tashkent Medical Academy",
-      "Samarkand State Medical University",
-      "Bukhara State Medical Institute"
-    ],
-    Kazakhstan: [
-      "Al-Farabi Kazakh National University",
-      "Kazakh National Medical University",
-      "South Kazakhstan Medical Academy"
-    ],
-    Philippines: [
-      "University of Santo Tomas",
-      "Emilio Aguinaldo College",
-      "AMA School of Medicine"
-    ],
-    Georgia: [
-      "Tbilisi State Medical University",
-      "Batumi Shota Rustaveli State University",
-      "David Tvildiani Medical University"
-    ],
-    Kyrgyzstan: [
-      "Osh State University",
-      "Kyrgyz State Medical Academy",
-      "International School of Medicine"
-    ],
-    Egypt: [
-      "Cairo University",
-      "Ain Shams University",
-      "Alexandria University",
-      "Mansoura University"
-    ]
-  };
+  Russia: [
+    { name: "Kazan Federal University", url: "https://kpfu.ru/eng" },
+    { name: "First Moscow State Medical University", url: "https://www.sechenov.ru/eng/" },
+    { name: "Crimea Federal University", url: "https://cfuv.ru/en" },
+    { name: "Volgograd State Medical University", url: "https://www.volgmed.ru/en/" },
+  ],
+  Uzbekistan: [
+    { name: "Tashkent Medical Academy", url: "https://tma.uz/en/" },
+    { name: "Samarkand State Medical University", url: "https://www.sammi.uz/en/" },
+    { name: "Bukhara State Medical Institute", url: "https://bsmi.uz/en/" },
+  ],
+  Kazakhstan: [
+    { name: "Al-Farabi Kazakh National University", url: "https://www.kaznu.kz/en/" },
+    { name: "Kazakh National Medical University", url: "https://kaznmu.kz/eng/" },
+    { name: "South Kazakhstan Medical Academy", url: "https://skma.edu.kz/en/" },
+  ],
+  Philippines: [
+    { name: "University of Santo Tomas", url: "https://www.ust.edu.ph/" },
+    { name: "Emilio Aguinaldo College", url: "https://eac.edu.ph/" },
+    { name: "AMA School of Medicine", url: "https://www.amaes.edu.ph/" },
+  ],
+  Georgia: [
+    { name: "Tbilisi State Medical University", url: "https://tsmu.edu/" },
+    { name: "Batumi Shota Rustaveli State University", url: "https://bsu.edu.ge/en/" },
+    { name: "David Tvildiani Medical University", url: "https://dtmu.ge/" },
+  ],
+  Kyrgyzstan: [
+    { name: "Osh State University", url: "https://www.oshsu.kg/" },
+    { name: "Kyrgyz State Medical Academy", url: "https://www.kgma.kg/" },
+    { name: "International School of Medicine", url: "https://ism.edu.kg/" },
+  ],
+  Egypt: [
+    { name: "Cairo University", url: "https://cu.edu.eg/Home" },
+    { name: "Ain Shams University", url: "https://www.asu.edu.eg/" },
+    { name: "Alexandria University", url: "https://alexu.edu.eg/" },
+    { name: "Mansoura University", url: "https://www.mans.edu.eg/en" },
+  ]
+};
 
 
   export const stories = [

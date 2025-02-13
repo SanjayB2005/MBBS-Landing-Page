@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { universities } from '../Constants/index'; 
+import { universities } from '../Constants/index';
 
 const TopUniversities = () => {
   const [activeCountry, setActiveCountry] = useState('Russia');
 
-  
   return (
     <section id="universities" className="w-full py-16 md:py-24 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -41,7 +40,7 @@ const TopUniversities = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {universities[activeCountry].map((university, index) => (
             <div 
-              key={university}
+              key={university.name}
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
             >
               <div className="flex items-start gap-4">
@@ -50,7 +49,7 @@ const TopUniversities = () => {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-lg font-semibold text-gray-800 truncate">
-                    {university}
+                    {university.name}
                   </h3>
                   <p className="text-gray-600 mt-1">
                     {activeCountry}
@@ -58,9 +57,11 @@ const TopUniversities = () => {
                 </div>
               </div>
               <div className="mt-6 flex justify-between items-center">
-                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-full text-sm font-medium hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
-                  Learn more
-                </button>
+                <a href={university.url} target="_blank" rel="noopener noreferrer">
+                  <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-full text-sm font-medium hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                    Learn more
+                  </button>
+                </a>
                 <span className="text-sm text-gray-500 font-medium">
                   MBBS Program
                 </span>
