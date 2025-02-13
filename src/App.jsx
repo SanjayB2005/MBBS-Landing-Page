@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Sections/Hero'
 import Services from './Sections/Services'
@@ -9,23 +9,32 @@ import SuccessStories from './Sections/SucessStories'
 import StudyAbroadWithUs from './Sections/StudyAbroadWithUs'
 import ReactGA from 'react-ga'
 
-
-
-
 const App = () => {
-
   const trackingId = "G-PJ2LZWYRTB"
   ReactGA.initialize(trackingId)
-  ReactGA.set({ anonymizeIp: true ,
-    hitType: 'pageview',
-    page: window.location.pathname,
-  })
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
+    const script = document.createElement('script')
+    script.async = true
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`
+    document.head.appendChild(script)
+
+    const script2 = document.createElement('script')
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${trackingId}');
+    `
+    document.head.appendChild(script2)
+  }, [])
 
   return (
     <main className="relative">
       <Navbar />
-      <section >
+      <section>
         <Hero />
       </section>
 
@@ -47,7 +56,7 @@ const App = () => {
       <section className='padding'>
         <StudyAbroadWithUs />
       </section>
-      <section >
+      <section>
         <Footer />
       </section>
     </main>
