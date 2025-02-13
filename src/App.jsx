@@ -12,16 +12,15 @@ import ReactGA from 'react-ga'
 const trackingId = "G-PJ2LZWYRTB"
 ReactGA.initialize(trackingId)
 
-useEffect(() => {
-  ReactGA.pageview(window.location.pathname + window.location.search)
-}, [])
-
-
 const App = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
+
   return (
     <main className="relative">
       <Navbar />
-      <section >
+      <section>
         <Hero />
       </section>
 
@@ -43,7 +42,7 @@ const App = () => {
       <section className='padding'>
         <StudyAbroadWithUs />
       </section>
-      <section >
+      <section>
         <Footer />
       </section>
     </main>
