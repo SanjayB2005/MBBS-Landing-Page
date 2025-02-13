@@ -103,7 +103,7 @@ const SuccessStories = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-16 h-16 rounded-full overflow-hidden bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
                     <img
-                      src={`/api/placeholder/160/160`}
+                      src={`https://placehold.co/160x160`}
                       alt={story.name}
                       className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-300"
                     />
