@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Sections/Hero'
 import Services from './Sections/Services'
@@ -7,6 +7,14 @@ import Advantages from './Sections/Advantages'
 import TopUniversities from './Sections/TopUniversities'
 import SuccessStories from './Sections/SucessStories'
 import StudyAbroadWithUs from './Sections/StudyAbroadWithUs'
+import ReactGA from 'react-ga'
+
+const trackingId = "G-PJ2LZWYRTB"
+ReactGA.initialize(trackingId)
+
+useEffect(() => {
+  ReactGA.pageview(window.location.pathname + window.location.search)
+}, [])
 
 
 const App = () => {
